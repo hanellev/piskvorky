@@ -1,12 +1,6 @@
-h1 {
-    font:2em;
-    font-family: "Lobster", cursive;
-    color: #ffffff;
-    }
-
-    html {
-        min-height: 100%;
-    }
+html {
+    min-height: 100%;
+}
 
 body {
     background: linear-gradient(#615dad,#ffc8da);
@@ -14,10 +8,11 @@ body {
     min-height: 100vh;
 }
 
-.image {
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-}
+h1 {
+    font:2em;
+    font-family: "Lobster", cursive;
+    color: #ffffff;
+    }
 
 .app {
     display: flex;
@@ -26,6 +21,11 @@ body {
     justify-content: center;
     margin: 50px 20%;
     border-radius: 5px;
+    }
+
+.image {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
 .text {
