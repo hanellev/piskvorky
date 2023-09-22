@@ -1,11 +1,9 @@
-html {
-    min-height: 100%;
-}
 
 body {
     background: linear-gradient(#615dad,#ffc8da);
-    width: 100vw;
-    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 10px;
 }
 
 h1 {
@@ -13,6 +11,7 @@ h1 {
     font-family: "Lobster", cursive;
     color: #ffffff;
     }
+
 p {
     font-family: Helvetica, sans-serif;
 }  
@@ -21,8 +20,6 @@ p {
     display: flex;
     flex-direction: column;
     background-color: #283e50;
-    justify-content: center;
-    margin: 50px 20%;
     border-radius: 10px;
     }
 
