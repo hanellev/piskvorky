@@ -1,0 +1,12 @@
+body {
+    background: linear-gradient(#615dad,#ffc8da);
+    padding: 10px;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    font:2em;
+    font-family: "Lobster", cursive;
+    color: #ffffff;
+    text-align: center;
+    }
