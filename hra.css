@@ -1,12 +1,37 @@
 body {
     background: linear-gradient(#615dad,#ffc8da);
-    padding: 10px;
     background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    height: 100vh;
 }
 
 h1 {
     font:2em;
     font-family: "Lobster", cursive;
     color: #ffffff;
+    letter-spacing: 1px;
     text-align: center;
     }
+
+.hra_page {
+    max-width: 80vmin;
+    max-height: 80vmin;
+    }
+
+.herni-pole {
+    background-image: linear-gradient(#615dad, #ffc8da);
+    display: flex;
+    width: 100%;
+    height: 100%; 
+    flex-wrap: wrap;
+    border: 1px solid black;
+}
+
+.cell {
+    background-color: rgba(255, 255, 255, 0.3);
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    border: 1px solid black;
+}
