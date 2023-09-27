@@ -32,11 +32,39 @@ h1 {
     display: flex;
     align-items: center;
     text-transform: uppercase;
+    text-align: justify all ;
     color: #ffffff;
     font-family:sans-serif;
     font-size: large;
     font-weight: bold;
   }
+
+.circle {
+    padding-left: 5px;
+  }
+
+  .menu-icons {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    gap: 5px;
+  }
+
+.home {
+    background-color:#1fcca4;
+    border: 0px;
+    border-radius: 4px;
+    width: 100%;
+    height: 65%;
+}
+
+.replay {
+    background-color: #0197f6;
+    border: 0px;
+    border-radius: 4px;
+    width: 100%;
+    height: 65%;
+}
 
 .herni-pole {
     background-image: linear-gradient(#615dad, #ffc8da);
@@ -52,4 +80,20 @@ h1 {
     width: calc(100% / 10);
     height: calc(100% / 10);
     border: 1px solid black;
+}
+
+.cell:hover {
+    background-color:rgba(255, 255, 255, 0.5);
+}
+
+.home:hover {
+    background-color: #1cbb96;
+    content: '';  
+    cursor: pointer;
+}
+
+.replay:hover {
+    background-color: #0090e9;
+    content: '';  
+    cursor: pointer;
 }
