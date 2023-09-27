@@ -84,6 +84,7 @@ h1 {
 
 .cell:hover {
     background-color:rgba(255, 255, 255, 0.5);
+    cursor: pointer;
 }
 
 .home:hover {
@@ -96,4 +97,12 @@ h1 {
     background-color: #0090e9;
     content: '';  
     cursor: pointer;
+}
+
+@media (min-width: 640px){
+    .hra_page {
+    flex-shrink: 1;
+    max-width: 100vh;
+    max-height: fit-content;
+    }
 }
