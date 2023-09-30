@@ -104,11 +104,3 @@ h1 {
     content: '';  
     cursor: pointer;
 }
-
-@media (min-width: 640px){
-    .hra_page {
-    flex-shrink: 1;
-    max-width: 100vh;
-    max-height: fit-content;
-    }
-}
