@@ -1,26 +1,34 @@
 
 body {
-    background: linear-gradient(#615dad,#ffc8da);
-    background-repeat:no-repeat;
+    background: linear-gradient(#615dad,#ffc8da) fixed;
+    /* fixed vyřeší přetékání gradientu */
     display: flex;
     justify-content: center;
-    margin: 0;
-    height: 120vh;
+    align-items: center;
+    margin: auto;
+    /* nastaví stejné okraje a oddělí body od html části */
+    height: 100vh;
+    /* můj největší box by měl mít výšku 100vh, aby se výška vždy přizpůsobila displayi
+    a zároveň nechci, aby se moc roztahovala šířka, takže ji omezím na 80vmin */
+    max-width: 80vmin;
 }   
 
 h1 {
-    font:2em;
     font-family: "Lobster", cursive;
     color: #ffffff;
-    font-size: 60px;
+    font-size: 4rem;
+    /* v rem, tak je velikost responzivní a vzdycky se vypočítá 4x (velikost písma v celém html - to je defaultně 16px)*/
     letter-spacing: 1px;
     text-align: center;
+    margin: 5px;
     }
 
 
 .hra_page {
-    max-width: 80vmin;
-    max-height: 80vmin;
+    display:flex;
+    flex-direction: column;
+    width: 80%;
+    /* šířka obsahu je 80% rodiče, což je body */
     }
 
 .menu {
@@ -31,8 +39,6 @@ h1 {
 .menu-hraje {
     display: flex;
     align-items: center;
-    text-transform: uppercase;
-    text-align: justify all ;
     color: #ffffff;
     font-family:sans-serif;
     font-size: large;
@@ -45,8 +51,7 @@ h1 {
 
   .menu-icons {
     display: flex;
-    flex-direction: row;
-    justify-items: center;
+    align-items: center;
     gap: 5px;
   }
 
@@ -70,15 +75,16 @@ h1 {
     background-image: linear-gradient(#615dad, #ffc8da);
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-    height: 100%;
     border: 1px solid black;
 }
 
 .cell {
     background-color: rgba(255, 255, 255, 0.3);
     width: calc(100% / 10);
-    height: calc(100% / 10);
+    aspect-ratio: 1/1;
+      /* nastaví aby výška buňky byla stejná jako šířka, nemůžu nastavit výšku 100%/10, 
+      jelikož nevím, jak vysoké je herní pole. Záleží totiž na velikosti dipleje, 
+      ptž. body je nastaveno 100% a page má danou pouze šířku, ale výšku si vypočítám */
     border: 1px solid black;
 }
 
