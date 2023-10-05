@@ -19,25 +19,25 @@ const whenClicked = (event) => {
 }
 
 
-document.querySelector('button:nth-child(1)').addEventListener('click', whenClicked);
+document.querySelector('#cell1').addEventListener('click', whenClicked);
 
-document.querySelector('button:nth-child(2)').addEventListener('click', whenClicked);
+document.querySelector('#cell2').addEventListener('click', whenClicked);
 
-document.querySelector('button:nth-child(3)').addEventListener('click', whenClicked);
+document.querySelector('#cell3').addEventListener('click', whenClicked);
 
-document.querySelector('button:nth-child(4)').addEventListener('click', whenClicked);
+document.querySelector('#cell4').addEventListener('click', whenClicked);
 
-document.querySelector('button:nth-child(5)').addEventListener('click', whenClicked);
+document.querySelector('#cell5').addEventListener('click', whenClicked);
 
-document.querySelector('button:nth-child(6)').addEventListener('click', whenClicked);
+document.querySelector('#cell6').addEventListener('click', whenClicked);
 
-document.querySelector('button:nth-child(7)').addEventListener('click', whenClicked);
+document.querySelector('#cell7').addEventListener('click', whenClicked);
 
-document.querySelector('button:nth-child(8)').addEventListener('click', whenClicked);
+document.querySelector('#cell8').addEventListener('click', whenClicked);
 
-document.querySelector('button:nth-child(9)').addEventListener('click', whenClicked);
+document.querySelector('#cell9').addEventListener('click', whenClicked);
 
-document.querySelector('button:nth-child(10)').addEventListener('click', whenClicked);
+document.querySelector('#cell10').addEventListener('click', whenClicked);
 
 
 const whenRefreshed = (event) => {
