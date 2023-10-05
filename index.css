@@ -3,7 +3,9 @@ body {
     background: linear-gradient(#615dad,#ffc8da);
     display: flex;
     align-items: center;
-    padding: 10px;
+    margin: auto;
+    height: 100vh;
+    max-width: 100vh;
 }
 
 h1 {
@@ -67,8 +69,8 @@ p {
     cursor: pointer;
   }
 
-@media (min-width:620px) {
+@media (min-width:620px), (max-width:620px)  {
     .app {
-          max-width: 40%;
+          max-width: 60%;
           margin: 50px auto;
         } }

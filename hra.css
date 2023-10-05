@@ -20,7 +20,7 @@ h1 {
     /* v rem, tak je velikost responzivní a vzdycky se vypočítá 4x (velikost písma v celém html - to je defaultně 16px)*/
     letter-spacing: 1px;
     text-align: center;
-    margin: 5px;
+    margin: 20px;
     }
 
 
@@ -34,41 +34,61 @@ h1 {
 .menu {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 5px;
     }
 
 .menu-hraje {
     display: flex;
     align-items: center;
-    color: #ffffff;
-    font-family:sans-serif;
-    font-size: large;
-    font-weight: bold;
+    gap: 10px;
   }
 
-.circle {
-    padding-left: 5px;
-  }
+.menu-hraje__text {
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 1.4rem;
+    align-self: center;
+}
 
-  .menu-icons {
+.menu-hraje__circle {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border: 3px solid white;
+    border-radius: 50%;
+    align-self: center;
+}
+
+.menu-hraje__cross {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border: 3px solid white;
+    border-radius: 50%;
+    align-self: center;
+}
+
+.menu-icons {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
+    margin-bottom: 5px;
   }
 
-.home {
+.button_home {
     background-color:#1fcca4;
     border: 0px;
     border-radius: 4px;
     width: 100%;
-    height: 65%;
+    height: auto;
 }
 
-.replay {
+#button_replay {
     background-color: #0197f6;
     border: 0px;
     border-radius: 4px;
     width: 100%;
-    height: 65%;
+    height: auto;
 }
 
 .herni-pole {
@@ -105,10 +125,27 @@ h1 {
     cursor: pointer;
 }
 
-cell--circle {
-
+.cell--circle {
+    background-image: url("ikonky/circle.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 70%;
+    background-position: center;
 }
 
-cell--cross {
-    
+.cell--cross {
+    background-image: url("ikonky/cross.svg");
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
 }
+
+/* @keyframes increase {
+    0% {
+        background-size: 0%;
+    }
+
+    100% {
+        background-size: 60%;
+    }
+} */
