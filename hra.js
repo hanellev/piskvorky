@@ -1,17 +1,17 @@
 let currentPlayer = 'circle';
 
-document.querySelector('#menu-hraje__icon').classList.add('menu-hraje__circle')
+document.querySelector('#menu__hraje-icon').classList.add('menu__hraje-circle')
 
 const whenClicked = (event) => {
 	if (currentPlayer === 'circle') {
-        event.target.classList.add('cell--circle');
-        document.querySelector('#menu-hraje__icon').classList.remove('menu-hraje__circle')
-        document.querySelector('#menu-hraje__icon').classList.add('menu-hraje__cross')
+        event.target.classList.add('cell__circle');
+        document.querySelector('#menu__hraje-icon').classList.remove('menu-hraje__circle')
+        document.querySelector('#menu__hraje-icon').classList.add('menu-hraje__cross')
         currentPlayer = 'cross';
     } else {
-        event.target.classList.add('cell-cross');
-        document.querySelector('#menu-hraje__icon').classList.remove('menu-hraje__cross')
-        document.querySelector('#menu-hraje__icon').classList.add('menu-hraje__circle')
+        event.target.classList.add('cell__cross');
+        document.querySelector('#menu__hraje-icon').classList.remove('menu__hraje-cross')
+        document.querySelector('#menu__hraje-icon').classList.add('menu__hraje-circle')
         currentPlayer = 'circle';
     }
 
@@ -49,4 +49,4 @@ const whenRefreshed = (event) => {
       }
 }
 
-document.querySelector('#button_replay').addEventListener('click', whenRefreshed)
+document.querySelector('#button-replay').addEventListener('click', whenRefreshed)
