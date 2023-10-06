@@ -52,6 +52,7 @@ h1 {
 }
 
 .menu__hraje-circle {
+    background-image: url("ikonky/circle.svg");
     display: inline-block;
     width: 1rem;
     height: 1rem;
@@ -61,6 +62,7 @@ h1 {
 }
 
 .menu__hraje-cross {
+    background-image: url("ikonky/cross.svg");
     display: inline-block;
     position: relative;
     width: 1rem;
@@ -68,18 +70,6 @@ h1 {
     border: 3px solid white;
     border-radius: 50%;
     align-self: center;
-}
-
-.menu__hraje-cross::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    height: 1.9rem;
-    width: 3px;
-    background-color: white;
-    align-self: center;
-    transform: translate(-50%, -50%) rotate(90deg);
 }
 
 .menu__icons {
@@ -140,7 +130,7 @@ h1 {
 }
 
 .cell__circle {
-    background-image: url("ikonky/circle.svg");
+    background-image: url("ikonky/circle_black.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-size: 70%;
@@ -148,7 +138,7 @@ h1 {
 }
 
 .cell__cross {
-    background-image: url("ikonky/cross.svg");
+    background-image: url("ikonky/cross_black.svg");
     background-repeat: no-repeat;
     background-size: 70%;
     background-position: center;
