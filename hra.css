@@ -24,7 +24,7 @@ h1 {
     }
 
 
-.hra_page {
+.hra__page {
     display:flex;
     flex-direction: column;
     width: 80%;
@@ -37,13 +37,13 @@ h1 {
     margin-bottom: 5px;
     }
 
-.menu-hraje {
+.menu__hraje {
     display: flex;
     align-items: center;
     gap: 10px;
   }
 
-.menu-hraje__text {
+.menu__hraje-text {
     font-family:Arial, Helvetica, sans-serif;
     color: white;
     font-size: 1.4rem;
@@ -51,7 +51,7 @@ h1 {
     align-self: center;
 }
 
-.menu-hraje__circle {
+.menu__hraje-circle {
     display: inline-block;
     width: 1rem;
     height: 1rem;
@@ -60,8 +60,9 @@ h1 {
     align-self: center;
 }
 
-.menu-hraje__cross {
+.menu__hraje-cross {
     display: inline-block;
+    position: relative;
     width: 1rem;
     height: 1rem;
     border: 3px solid white;
@@ -69,14 +70,26 @@ h1 {
     align-self: center;
 }
 
-.menu-icons {
+.menu__hraje-cross::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 1.9rem;
+    width: 3px;
+    background-color: white;
+    align-self: center;
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.menu__icons {
     display: flex;
     align-items: center;
     gap: 10px;
     margin-bottom: 5px;
   }
 
-.button_home {
+.button-home {
     background-color:#1fcca4;
     border: 0px;
     border-radius: 4px;
@@ -84,7 +97,7 @@ h1 {
     height: auto;
 }
 
-#button_replay {
+#button-replay {
     background-color: #0197f6;
     border: 0px;
     border-radius: 4px;
@@ -92,7 +105,7 @@ h1 {
     height: auto;
 }
 
-.herni-pole {
+.herni__pole {
     background-image: linear-gradient(#615dad, #ffc8da);
     display: flex;
     flex-wrap: wrap;
@@ -126,7 +139,7 @@ h1 {
     cursor: pointer;
 }
 
-.cell--circle {
+.cell__circle {
     background-image: url("ikonky/circle.svg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -134,7 +147,7 @@ h1 {
     background-position: center;
 }
 
-.cell--cross {
+.cell__cross {
     background-image: url("ikonky/cross.svg");
     background-repeat: no-repeat;
     background-size: 70%;
