@@ -18,27 +18,11 @@ const cellClick = (event) => {
     event.target.disabled = true;
 }
 
+const cells = document.querySelectorAll(".cell")
 
-document.querySelector('#cell1').addEventListener('click', cellClick);
-
-document.querySelector('#cell2').addEventListener('click', cellClick);
-
-document.querySelector('#cell3').addEventListener('click', cellClick);
-
-document.querySelector('#cell4').addEventListener('click', cellClick);
-
-document.querySelector('#cell5').addEventListener('click', cellClick);
-
-document.querySelector('#cell6').addEventListener('click', cellClick);
-
-document.querySelector('#cell7').addEventListener('click', cellClick);
-
-document.querySelector('#cell8').addEventListener('click', cellClick);
-
-document.querySelector('#cell9').addEventListener('click', cellClick);
-
-document.querySelector('#cell10').addEventListener('click', cellClick);
-
+cells.forEach((cell) => {
+  cell.addEventListener('click', cellClick);
+});
 
 const pressReplay = (event) => {
     const result = window.confirm('Hrát znovu?');
