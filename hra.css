@@ -53,20 +53,20 @@ h1 {
 
 .menu__hraje-circle {
     background-image: url("ikonky/circle.svg");
-    width: 1.3rem;
-    height: 1.3rem;
+    width: 1rem;
+    height: 1rem;
     background-size: 100%; 
     background-repeat: no-repeat;
-    margin-bottom: 5px;
+    /* margin-bottom: 2px; */
 }
 
 .menu__hraje-cross {
     background-image: url("ikonky/cross.svg");
-    width: 1.3rem;
-    height: 1.3rem;
+    width: 1rem;
+    height: 1rem;
     background-size: 100%; 
     background-repeat: no-repeat;
-    margin-bottom: 5px;
+    /* margin-bottom: 2px; */
 }
 
 .menu__icons {
