@@ -1,179 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Začít hrát</title>
-    <link rel="stylesheet" type="text/css" href="hra.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
-      rel="stylesheet"
-    />
-    <script type="module" src="hra.js"></script>
-  </head>
-  <body>
-    <div class="hra__page">
-      <h1>Piškvorky</h1>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Začít hrát</title>
+		<link rel="stylesheet" type="text/css" href="hra.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+			rel="stylesheet"
+		/>
+		<script type="module" src="hra.js"></script>
+	</head>
+	<body>
+		<div class="hra__page">
+			<h1>Piškvorky</h1>
 
-      <div class="menu">
-        <div class="menu__hraje">
-          <span class="menu__hraje-text">HRAJE: </span>
-          <span id="menu__hraje-icon"></span>
-        </div>
+			<div class="menu">
+				<div class="menu__hraje">
+					<span class="menu__hraje-text">HRAJE: </span>
+					<span id="menu__hraje-icon"></span>
+				</div>
 
-        <div class="menu__icons">
-          <button class="button-home">
-            <a href="index.html">
-              <image
-                class="home-icon"
-                src="ikonky/home.svg"
-                alt="home-icon"
-              ></image
-            ></a>
-          </button>
-          <button id="button-replay">
-            <a classs="replay" href="hra.html"
-              ><image
-                class="replay-icon"
-                src="ikonky/restart.svg"
-                alt="restart"
-              ></image
-            ></a>
-          </button>
-        </div>
-      </div>
+				<div class="menu__icons">
+					<button class="button-home">
+						<a href="index.html">
+							<image
+								class="home-icon"
+								src="ikonky/home.svg"
+								alt="home-icon"
+							></image
+						></a>
+					</button>
+					<button id="button-replay">
+						<a classs="replay" href="hra.html"
+							><image
+								class="replay-icon"
+								src="ikonky/restart.svg"
+								alt="restart"
+							></image
+						></a>
+					</button>
+				</div>
+			</div>
 
-      <div class="herni__pole">
-        <div class="cell_row"></div>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-      </div>
+			<div class="herni__pole">
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
 
-      <div class="cell_row">
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        </div>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
 
-      <div class="cell_row"></div>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-      </div>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
 
-      <div class="cell_row">
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-      </div>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
 
-      <div class="cell_row">
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-      </div>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
 
-      <div class="cell_row">
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-      </div>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
 
-      <div class="cell_row">
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-      </div>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
 
-      <div class="cell_row">
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-      </div>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
 
-      <div class="cell_row">
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-      </div>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
 
-      <div class="cell_row">
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-        <button class="cell"></button>
-      </div>
-    </div>
-    </div>
-  </body>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+				<button class="cell"></button>
+			</div>
+		</div>
+	</body>
 </html>
