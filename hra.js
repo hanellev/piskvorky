@@ -28,32 +28,33 @@ const cellClick = (event) => {
 	}
 
 	event.target.disabled = true;
-};
 
-const gameField = Array.from(cells).map((cell) => {
-	if (cell.classList.contains('cell_circle')) {
-		return 'o';
-	} else if (cell.classList.contains('cell_cross')) {
-		return 'x';
-	} else {
-		return '_';
+	const gameField = Array.from(cells).map((cell) => {
+		if (cell.classList.contains('cell__circle')) {
+			return 'o';
+		} else if (cell.classList.contains('cell__cross')) {
+			return 'x';
+		} else {
+			return '_';
+		}
+	});
+
+	const winner = findWinner(gameField);
+	if (winner === 'o' || winner === 'x') {
+		const winnerIs = () => {
+			alert(`Vyhrál hráč se symbolem: ${winner.toUpperCase()}!`);
+			window.location.reload();
+		};
+		setTimeout(winnerIs, 500);
+	} else if (winner === 'tie') {
+		const tieIs = () => {
+			alert('Hra skončila remízou.');
+			window.location.reload();
+		};
+		setTimeout(tieIs, 500);
 	}
-});
-
-const winner = findWinner(gameField);
-if (winner === 'o' || winner === 'x') {
-	const winnerIs = () => {
-		alert(`Vyhrál hráč se symbolem: ${winnerIs}!`);
-		window.location.reload();
-	};
-	setTimeout(winnerIs, 500);
-} else if (winner === 'tie') {
-	const tieIs = () => {
-		alert('Hra skončila remízou.');
-		window.location.reload();
-	};
-	setTimeout(tieIs, 500);
-}
+	console.log(winner);
+};
 
 cells.forEach((cell) => {
 	cell.addEventListener('click', cellClick);
