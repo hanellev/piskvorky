@@ -2,9 +2,9 @@ import { findWinner } from 'https://unpkg.com/piskvorky@0.1.4';
 
 let playingPlayer = 'circle';
 
-document.querySelector('#menu__hraje-icon').classList.add('menu__hraje-circle');
-
 const cells = document.querySelectorAll('.cell');
+
+document.querySelector('#menu__hraje-icon').classList.add('menu__hraje-circle');
 
 const cellClick = (event) => {
 	if (playingPlayer === 'circle') {
@@ -30,36 +30,33 @@ const cellClick = (event) => {
 	event.target.disabled = true;
 };
 
-cells.forEach((cell) => {
-	cell.addEventListener('click', cellClick);
+const gameField = Array.from(cells).map((cell) => {
+	if (cell.classList.contains('cell_circle')) {
+		return 'o';
+	} else if (cell.classList.contains('cell_cross')) {
+		return 'x';
+	} else {
+		return '_';
+	}
 });
 
-const hry = document.querySelectorAll('.hra'); //'.hra' bude ta řada po 1Oti prvcích//
+const winner = findWinner(gameField);
+if (winner === 'o' || winner === 'x') {
+	const winnerIs = () => {
+		alert(`Vyhrál hráč se symbolem: ${winnerIs}!`);
+		window.location.reload();
+	};
+	setTimeout(winnerIs, 500);
+} else if (winner === 'tie') {
+	const tieIs = () => {
+		alert('Hra skončila remízou.');
+		window.location.reload();
+	};
+	setTimeout(tieIs, 500);
+}
 
-hry.forEach((hra) => {
-	const policka = hra.querySelectorAll('.policko'); //policka budou cells a .policko bude .cell//
-	const vysledek = hra.querySelector('.vysledek');
-	const polePolicek = Array.from(policka).map((item) => {
-		if (item.classList.contains('kolecko')) {
-			return 'o';
-		} else if (item.classList.contains('krizek')) {
-			return 'x';
-		} else {
-			return '_';
-		}
-	});
-	//zjednodušená políčka pojmenuju cellArray = Array.from(cells).map(cell)
-
-	const winnerIs = findWinner(polePolicek);
-	if (winnerIs === 'o') {
-		vysledek.textContent = 'Vyhrálo kolečko!';
-	} else if (winnerIs === 'x') {
-		vysledek.textContent = 'Vyhrál křížek!';
-	} else if (winnerIs === 'tie') {
-		vysledek.textContent = 'Remíza!';
-	} else {
-		vysledek.textContent = 'Hra ještě probíhá';
-	}
+cells.forEach((cell) => {
+	cell.addEventListener('click', cellClick);
 });
 
 const pressReplay = (event) => {
