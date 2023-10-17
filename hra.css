@@ -1,142 +1,140 @@
-
 body {
-    background: linear-gradient(#615dad,#ffc8da) fixed;
-    /* fixed vyřeší přetékání gradientu */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    /* nastaví stejné okraje a oddělí body od html části */
-    height: 100vh;
-    /* můj největší box by měl mít výšku 100vh, aby se výška vždy přizpůsobila displayi
+	background: linear-gradient(#615dad, #ffc8da) fixed;
+	/* fixed vyřeší přetékání gradientu */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	/* nastaví stejné okraje a oddělí body od html části */
+	height: 100vh;
+	/* můj největší box by měl mít výšku 100vh, aby se výška vždy přizpůsobila displayi
     a zároveň nechci, aby se moc roztahovala šířka, takže ji omezím na 80vmin */
-    max-width: 80vmin;
-}   
+	max-width: 80vmin;
+}
 
 h1 {
-    font-family: "Lobster", cursive;
-    color: #ffffff;
-    font-size: 4rem;
-    /* v rem, tak je velikost responzivní a vzdycky se vypočítá 4x (velikost písma v celém html - to je defaultně 16px)*/
-    letter-spacing: 1px;
-    text-align: center;
-    margin: 20px;
-    }
-
+	font-family: 'Lobster', cursive;
+	color: #ffffff;
+	font-size: 4rem;
+	/* v rem, tak je velikost responzivní a vzdycky se vypočítá 4x (velikost písma v celém html - to je defaultně 16px)*/
+	letter-spacing: 1px;
+	text-align: center;
+	margin: 20px;
+}
 
 .hra__page {
-    display:flex;
-    flex-direction: column;
-    width: 80%;
-    /* šířka obsahu je 80% rodiče, což je body */
-    }
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+	/* šířka obsahu je 80% rodiče, což je body */
+}
 
 .menu {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 5px;
-    }
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 5px;
+}
 
 .menu__hraje {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-.menu__hraje-text {
-    font-family:Arial, Helvetica, sans-serif;
-    color: white;
-    font-size: 1.4rem;
-    font-weight: 550;
-    align-self: center;
+	display: flex;
+	align-items: center;
+	gap: 10px;
 }
 
-.menu__hraje-circle {
-    background-image: url("ikonky/circle.svg");
-    width: 1rem;
-    height: 1rem;
-    background-size: 100%; 
-    background-repeat: no-repeat;
-    /* margin-bottom: 2px; */
+.menu__hraje--text {
+	font-family: Arial, Helvetica, sans-serif;
+	color: white;
+	font-size: 1.4rem;
+	font-weight: 550;
+	align-self: center;
 }
 
-.menu__hraje-cross {
-    background-image: url("ikonky/cross.svg");
-    width: 1rem;
-    height: 1rem;
-    background-size: 100%; 
-    background-repeat: no-repeat;
-    /* margin-bottom: 2px; */
+.menu__hraje--circle {
+	background-image: url('ikonky/circle.svg');
+	width: 1rem;
+	height: 1rem;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	/* margin-bottom: 2px; */
+}
+
+.menu__hraje--cross {
+	background-image: url('ikonky/cross.svg');
+	width: 1rem;
+	height: 1rem;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	/* margin-bottom: 2px; */
 }
 
 .menu__icons {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 5px;
-  }
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 5px;
+}
 
 .button-home {
-    background-color:#1fcca4;
-    border: 0px;
-    border-radius: 4px;
-    width: 100%;
-    height: auto;
+	background-color: #1fcca4;
+	border: 0px;
+	border-radius: 4px;
+	width: 100%;
+	height: auto;
 }
 
 #button-replay {
-    background-color: #0197f6;
-    border: 0px;
-    border-radius: 4px;
-    width: 100%;
-    height: auto;
+	background-color: #0197f6;
+	border: 0px;
+	border-radius: 4px;
+	width: 100%;
+	height: auto;
 }
 
 .herni__pole {
-    background-image: linear-gradient(#615dad, #ffc8da);
-    display: flex;
-    flex-wrap: wrap;
-    border: 1px solid black;
+	background-image: linear-gradient(#615dad, #ffc8da);
+	display: flex;
+	flex-wrap: wrap;
+	border: 1px solid black;
 }
 
 .cell {
-    background-color: rgba(255, 255, 255, 0.3);
-    width: calc(100% / 10);
-    aspect-ratio: 1/1;
-      /* nastaví aby výška buňky byla stejná jako šířka, nemůžu nastavit výšku 100%/10, 
+	background-color: rgba(255, 255, 255, 0.3);
+	width: calc(100% / 10);
+	aspect-ratio: 1/1;
+	/* nastaví aby výška buňky byla stejná jako šířka, nemůžu nastavit výšku 100%/10, 
       jelikož nevím, jak vysoké je herní pole. Záleží totiž na velikosti dipleje, 
       ptž. body je nastaveno 100% a page má danou pouze šířku, ale výšku si vypočítám */
-    border: 1px solid black;
+	border: 1px solid black;
 }
 
 .cell:hover {
-    background-color:rgba(255, 255, 255, 0.5);
-    cursor: pointer;
+	background-color: rgba(255, 255, 255, 0.5);
+	cursor: pointer;
 }
 
 .home:hover {
-    background-color: #1cbb96;
-    content: '';  
-    cursor: pointer;
+	background-color: #1cbb96;
+	content: '';
+	cursor: pointer;
 }
 
 .replay:hover {
-    background-color: #0090e9;
-    content: '';  
-    cursor: pointer;
+	background-color: #0090e9;
+	content: '';
+	cursor: pointer;
 }
 
 .cell__circle {
-    background-image: url("ikonky/circle_black.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-size: 70%;
-    background-position: center;
+	background-image: url('ikonky/circle_black.svg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-size: 70%;
+	background-position: center;
 }
 
 .cell__cross {
-    background-image: url("ikonky/cross_black.svg");
-    background-repeat: no-repeat;
-    background-size: 70%;
-    background-position: center;
+	background-image: url('ikonky/cross_black.svg');
+	background-repeat: no-repeat;
+	background-size: 70%;
+	background-position: center;
 }
