@@ -4,26 +4,28 @@ let playingPlayer = 'circle';
 
 const cells = document.querySelectorAll('.cell');
 
-document.querySelector('#menu__hraje-icon').classList.add('menu__hraje-circle');
+document
+	.querySelector('#menu__hraje--icon')
+	.classList.add('menu__hraje--circle');
 
 const cellClick = (event) => {
 	if (playingPlayer === 'circle') {
 		event.target.classList.add('cell__circle');
 		document
-			.querySelector('#menu__hraje-icon')
-			.classList.remove('menu__hraje-circle');
+			.querySelector('#menu__hraje--icon')
+			.classList.remove('menu__hraje--circle');
 		document
-			.querySelector('#menu__hraje-icon')
-			.classList.add('menu__hraje-cross');
+			.querySelector('#menu__hraje--icon')
+			.classList.add('menu__hraje--cross');
 		playingPlayer = 'cross';
 	} else {
 		event.target.classList.add('cell__cross');
 		document
-			.querySelector('#menu__hraje-icon')
-			.classList.remove('menu__hraje-cross');
+			.querySelector('#menu__hraje--icon')
+			.classList.remove('menu__hraje--cross');
 		document
-			.querySelector('#menu__hraje-icon')
-			.classList.add('menu__hraje-circle');
+			.querySelector('#menu__hraje--icon')
+			.classList.add('menu__hraje--circle');
 		playingPlayer = 'circle';
 	}
 
@@ -53,7 +55,6 @@ const cellClick = (event) => {
 		};
 		setTimeout(tieIs, 500);
 	}
-	console.log(winner);
 };
 
 cells.forEach((cell) => {
