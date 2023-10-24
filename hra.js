@@ -8,6 +8,37 @@ document
 	.querySelector('#menu__hraje--icon')
 	.classList.add('menu__hraje--circle');
 
+const computerPlayer = async () => {
+	const cellsArray = Array.from(cells);
+	const board = cellsArray.map((cell) => {
+		if (cell.classList.contains('cell__circle')) {
+			return 'o';
+		} else if (cell.classList.contains('cell__cross')) {
+			return 'x';
+		} else {
+			return '_';
+		}
+	});
+	const response = await fetch(
+		'https://piskvorky.czechitas-podklady.cz/api/suggest-next-move',
+		{
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({
+				board: board,
+			}),
+		}
+	);
+	const data = await response.json();
+	const x = data.position.x;
+	const y = data.position.y;
+	const index = x + y * 10;
+	const button = cellsArray[index];
+	button.click();
+};
+
 const cellClick = (event) => {
 	if (playingPlayer === 'circle') {
 		event.target.classList.add('cell__circle');
@@ -55,6 +86,9 @@ const cellClick = (event) => {
 		};
 		setTimeout(tieIs, 500);
 	}
+	if (playingPlayer === 'cross') {
+		computerPlayer();
+	}
 };
 
 cells.forEach((cell) => {
@@ -64,7 +98,7 @@ cells.forEach((cell) => {
 const pressReplay = (event) => {
 	const result = window.confirm('Hrát znovu?');
 	if (result === true) {
-		window.open('hra.html', 'Refresh..');
+		window.location.reload();
 	} else {
 		event.preventDefault();
 	}
